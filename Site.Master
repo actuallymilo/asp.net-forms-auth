@@ -1,0 +1,48 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="FormsAuth.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="site-header">
+    <script src="/js/dropdown.js"></script>
+    <div class="logo-container">
+        <img src="/images/logo.png" alt="Logo" class="logo">
+        <h1>Site Header</h1>
+    </div>
+    <button class="menu-toggle" aria-label="Toggle navigation">
+        &#9776;
+    </button>
+    <nav class="navbar">
+        <a href="/">Link 1</a>
+        <a href="/">Link 2</a>
+        <a href="/">Link 3</a>
+        <a href="/">Link 4</a>
+        <a href="/">Link 5</a>
+        <a href="/">Link 6</a>
+        <a href="/">Link 7</a>
+        <a href="/">Link 8</a>
+        <a href="/">Link 9</a>
+        <a href="/">Link 10</a>
+        <asp:PlaceHolder ID="LogoutPlaceholder" runat="server"></asp:PlaceHolder>
+    </nav>
+</header>
+    <form runat="server">
+    <div>
+        <asp:ContentPlaceHolder ID="Content" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+<script src="/js/setdarkmode.js"></script>
+<footer class="site-footer">
+    <small>Site footer text</small>
+    <button id="dark-mode-toggle">Toggle Dark Mode</button>
+</footer>
+</body>
+</html>
