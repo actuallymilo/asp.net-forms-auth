@@ -1,0 +1,235 @@
+body {
+    font-family: 'Product Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.site-header {
+    background-color: #f33a3a;
+    color: white;
+    padding: 10px 20px;
+    margin: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.logo-container {
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 64px;
+    width: 64px;
+    margin-right: 20px;
+}
+
+.subtitle {
+    font-size: 0.9em;
+    color: #e6e6e6;
+}
+
+.navbar {
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #b22222;
+    padding: 10px 0;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 10px 20px;
+}
+
+.site-footer {
+    background-color: #f1f1f1;
+    padding: 10px 20px;
+    margin: 0 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.site-footer button {
+    margin-left: 15px;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+}
+
+body.dark-mode .site-footer {
+    background-color: #333333;
+}
+
+body.dark-mode .site-footer button {
+    background-color: #444;
+    color: #ddd;
+}
+
+.cell {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+body.dark-mode .cell {
+    border: 1px solid #444;
+    background-color: #1e1e1e;
+}
+
+.cell a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+body.dark-mode .cell a {
+    color: #66aaff;
+}
+
+@font-face {
+    font-family: 'Product Sans';
+    src: url('../fonts/ProductSans.woff2') format('woff2'),
+         url('../fonts/ProductSans.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@media (max-width: 768px) {
+    .logo-container {
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: #b22222;
+        border-radius: 5px;
+    }
+
+    .navbar a {
+        display: block;
+        padding: 10px;
+        margin: 0;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+}
+
+.content-wrapper {
+    width: 100%;
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.site-content {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.login-form {
+    display: flex;
+    gap: 15px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .login-form {
+    background-color: #1e1e1e;
+    border: 1px solid #444;
+}
+
+.login-form label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.login-input {
+    width: 100%;
+    display: flex;
+    max-width: 300px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+body.dark-mode .login-input {
+    background-color: #333;
+    color: #fff;
+    border-color: #444;
+}
+
+.login-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f33a3a;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover {
+    background-color: #d22a2a;
+}
+
+.error-message {
+    color: red;
+    display: block;
+    margin-top: 10px;
+}
